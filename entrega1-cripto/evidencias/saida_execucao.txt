@@ -1,0 +1,22 @@
+=== ENTREGA 1: Criptografia assimétrica e confiança ===
+
+[1] Chaves geradas (RSA-3072 e Ed25519) e salvas em ./keys/
+[2] Mensagem original: Transferir R$ 1.000,00 para a conta 1234-5
+[3] Pacote protegido (texto cifrado, base64): IiFuH7Qhh0I9x8JlrlhJh9Aizh7q2xlugq2Dm0/d...
+
+--- TESTE 1: pacote íntegro ---
+Sucesso. Mensagem recuperada: Transferir R$ 1.000,00 para a conta 1234-5
+
+--- TESTE 2: 1 bit do texto cifrado adulterado ---
+FALHA: assinatura inválida (origem/integridade não confirmadas)
+
+--- TESTE 3: atacante re-assina com a própria chave ---
+FALHA: assinatura inválida (origem/integridade não confirmadas)
+
+--- TESTE 4: assinatura ignorada: o AES-GCM também protege ---
+FALHA: tag GCM inválida (o próprio AES-GCM detecta a adulteração)
+
+--- TESTE 5: destinatário errado tenta decifrar ---
+FALHA: decifragem rejeitada (dados adulterados ou chave errada)
+
+Todos os testes concluídos como esperado.

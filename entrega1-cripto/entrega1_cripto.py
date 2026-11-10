@@ -20,8 +20,9 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 RSA_BITS = 3072         
 AES_KEY_BITS = 256    
 NONCE_BYTES = 12        
-KEYS_DIR = Path("keys")         
-EVID_DIR = Path("evidencias")
+BASE_DIR = Path(__file__).resolve().parent
+KEYS_DIR = BASE_DIR / "keys"
+EVID_DIR = BASE_DIR / "evidencias"
 
 
 # ---------------------------------------------------------------- utilitários
@@ -128,7 +129,7 @@ def main():
     # Geração e armazenamento das chaves
     rsa_priv, ed_priv = gerar_chaves()
     salvar_chaves(rsa_priv, ed_priv, senha=b"senha-de-laboratorio-trocar")
-    print(f"[1] Chaves geradas (RSA-{RSA_BITS} e Ed25519) e salvas em ./{KEYS_DIR}/")
+    print(f"[1] Chaves geradas (RSA-{RSA_BITS} e Ed25519) e salvas em ./{KEYS_DIR.name}/")
 
     mensagem = "Transferir R$ 1.000,00 para a conta 1234-5".encode()
     print(f"[2] Mensagem original: {mensagem.decode()}")

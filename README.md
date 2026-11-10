@@ -1,6 +1,6 @@
 # Projeto Integrador — Segurança Aplicada ao Desenvolvimento
 
-Disciplina: Segurança da Informação — Sistemas de Informação/ADS — UNIT
+Disciplina: Segurança da Informação — Sistemas de Informação/ADS/Ciências da Computação — UNIT
 Docente: Ana Carla do Nascimento Santos
 
 **Estudante(s):** Wagner Rodrigues, Otávio Henrique, Robert Costa

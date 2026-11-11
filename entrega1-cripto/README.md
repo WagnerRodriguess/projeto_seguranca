@@ -7,7 +7,6 @@ Um serviço (A) precisa enviar uma mensagem a outro (B) garantindo que **só B a
 
 ## 2. Ambiente e tecnologias
 - Python 3.10+ e biblioteca [`cryptography`](https://cryptography.io) (consolidada; nenhum algoritmo próprio).
-- Funciona localmente ou no Google Colab (`pip install cryptography`).
 
 ## 3. Algoritmos, parâmetros e justificativa
 | Função | Algoritmo | Parâmetros | Justificativa |

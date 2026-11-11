@@ -1,6 +1,6 @@
 # Entrega 1 — Criptografia assimétrica e confiança
 
-**Disciplina:** Segurança da Informação — UNIT | **Estudante(s):** Wagner Rodrigues, Otávio Henrique, Robert Costa
+**Disciplina:** Segurança da Informação — UNIT | **Estudante(s):** Wagner Rodrigues, Otávio Henrique, Enzo Leonardo
 
 ## 1. Problema e objetivo
 Um serviço (A) precisa enviar uma mensagem a outro (B) garantindo que **só B a leia** (sigilo) e que **B tenha certeza de que veio de A e não foi alterada** (autenticidade e integridade). Esta entrega implementa **as duas** opções do enunciado: cifragem híbrida **e** assinatura digital.

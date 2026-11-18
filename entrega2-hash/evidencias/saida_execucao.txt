@@ -1,0 +1,59 @@
+=== ENTREGA 2: Hash e autenticação segura ===
+
+--- 1) Cadastro (senhas fictícias) ---
+Usuário 'ana' cadastrado.
+Usuário 'bruno' cadastrado com a MESMA senha de 'ana'.
+Rejeitado ('a'): Usuário inválido: use 3 a 32 caracteres (letras, números, _ . -)
+Rejeitado ('ana'): Usuário já cadastrado
+Rejeitado ('x y'): Usuário inválido: use 3 a 32 caracteres (letras, números, _ . -)
+
+--- 2) Registro protegido no banco (nenhuma senha em texto puro) ---
+usuario: ana
+  senha_hash (completo): $argon2id$v=19$m=65536,t=3,p=4$KKqo8h/1pWCmQGH3FkwBUg$NcE/a2gOr+0JBpG6sfcgmZUF3nVU6bWSXtrDBO+M9yM
+  algoritmo=argon2id v=19 m=65536 KiB t=3 p=4
+  salt (base64): KKqo8h/1pWCmQGH3FkwBUg
+  hash (base64): NcE/a2gOr+0JBpG6sfcgmZUF3nVU6bWSXtrDBO+M9yM
+
+usuario: bruno
+  senha_hash (completo): $argon2id$v=19$m=65536,t=3,p=4$vX/SKLIQc0NALoosVJX92w$VYgJcWe/Skj3V2Y3PtFfJOYylXWqKEpw+xDXbuJG8h4
+  algoritmo=argon2id v=19 m=65536 KiB t=3 p=4
+  salt (base64): vX/SKLIQc0NALoosVJX92w
+  hash (base64): VYgJcWe/Skj3V2Y3PtFfJOYylXWqKEpw+xDXbuJG8h4
+
+Senha em texto puro aparece no arquivo do banco? False
+Hashes de 'ana' e 'bruno' iguais? False (salts diferentes)
+
+--- 3) Login correto e incorreto ---
+ana + senha correta  -> (True, 'Login realizado com sucesso')
+ana + senha errada   -> (False, 'Usuário ou senha inválidos')
+usuário inexistente  -> (False, 'Usuário ou senha inválidos')
+Entrada tipo SQL injection -> (False, 'Usuário ou senha inválidos')
+
+--- 4) Bloqueio temporário após 5 falhas seguidas ---
+tentativa errada 1 em 'bruno' -> (False, 'Usuário ou senha inválidos')
+tentativa errada 2 em 'bruno' -> (False, 'Usuário ou senha inválidos')
+tentativa errada 3 em 'bruno' -> (False, 'Usuário ou senha inválidos')
+tentativa errada 4 em 'bruno' -> (False, 'Usuário ou senha inválidos')
+tentativa errada 5 em 'bruno' -> (False, 'Usuário ou senha inválidos')
+senha CORRETA durante o bloqueio -> (False, 'Conta temporariamente bloqueada. Tente novamente mais tarde')
+
+--- 5) Atualização automática de parâmetros (rehash) ---
+Antes do login : m=8192 KiB, t=1, p=1
+login de 'carla' -> (True, 'Login realizado com sucesso')
+Depois do login: m=65536 KiB, t=3, p=4
+
+--- 6) Por que SHA-256 isolado não é adequado para senhas ---
+SHA-256 sem salt (dois usuários, mesma senha):
+  usuário 1: b97f6ad6ad04b87943d860d683eb8e575520a0c6bd8a6828c4b84bfb5aef59c6
+  usuário 2: b97f6ad6ad04b87943d860d683eb8e575520a0c6bd8a6828c4b84bfb5aef59c6
+  hashes iguais? True  -> quem vê um, descobre todos os que usam a mesma senha
+Argon2id com salt (dois usuários, mesma senha):
+  usuário 1: $argon2id$v=19$m=65536,t=3,p=4$Z/UJKMowq56pBSHarHHloQ$41Kt0v...
+  usuário 2: $argon2id$v=19$m=65536,t=3,p=4$RyPygBssNxX1w0S47Suwlg$WK6fut...
+  hashes iguais? False
+Custo para testar palpites de senha (1 núcleo de CPU):
+  SHA-256 : ~2,237,640 palpites/segundo
+  Argon2id: ~6.0 palpites/segundo (167 ms por hash)
+  Argon2id é ~373,062x mais lento para quem tenta adivinhar
+
+Demonstração concluída.

@@ -1,0 +1,11 @@
+usuario: ana
+  senha_hash (completo): $argon2id$v=19$m=65536,t=3,p=4$Rz0Us6tbFMw0QvNb3kvU6g$Orl7yhnKTl6ejFY5YLaq0hQ7eO/pKvYEHQiM80YXe2I
+  algoritmo=argon2id v=19 m=65536 KiB t=3 p=4
+  salt (base64): Rz0Us6tbFMw0QvNb3kvU6g
+  hash (base64): Orl7yhnKTl6ejFY5YLaq0hQ7eO/pKvYEHQiM80YXe2I
+
+usuario: bruno
+  senha_hash (completo): $argon2id$v=19$m=65536,t=3,p=4$mgJTfi7Q8OnNHkV9Um+Icw$f9A4eitij1Hjjx6nLuysfTjdk2hP/CRLPM+d476dKfc
+  algoritmo=argon2id v=19 m=65536 KiB t=3 p=4
+  salt (base64): mgJTfi7Q8OnNHkV9Um+Icw
+  hash (base64): f9A4eitij1Hjjx6nLuysfTjdk2hP/CRLPM+d476dKfc

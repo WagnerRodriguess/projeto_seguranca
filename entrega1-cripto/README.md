@@ -40,8 +40,6 @@ Execute dentro da pasta `entrega1-cripto/`. Gera `./keys/` (PEM; privadas proteg
 | 4 | Ignorando a assinatura, texto adulterado | Tag GCM inválida (defesa em profundidade) | ✔ |
 | 5 | Destinatário errado | Decifragem rejeitada | ✔ |
 
-Para o vídeo de evidência: grave a execução do script e mostre `pacote_exemplo.json` e os arquivos em `keys/`.
-
 ## 6. Conceitos exigidos
 
 ### Sigilo × autenticidade

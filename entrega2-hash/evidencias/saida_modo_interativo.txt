@@ -1,0 +1,29 @@
+##### MODO PADRÃO: pergunta (N) e asteriscos; backspace; depois login com 's' (visível)
+=== Cadastro e login (Argon2id) ===
+
+1) Cadastrar   2) Login   0) Sair
+Opção: 1
+Mostrar a senha enquanto digita? (s/N): n
+Usuário: ana
+Senha: *****************
+Cadastro realizado.
+
+1) Cadastrar   2) Login   0) Sair
+Opção: 2
+Mostrar a senha enquanto digita? (s/N): s
+Atenção: a senha ficará visível na tela. Use apenas senhas fictícias.
+Usuário: ana
+Senha: senha forte exemplo
+Login realizado com sucesso
+
+1) Cadastrar   2) Login   0) Sair
+Opção: 2
+Mostrar a senha enquanto digita? (s/N): 
+Usuário: ana
+Senha: ***********
+Usuário ou senha inválidos
+
+1) Cadastrar   2) Login   0) Sair
+Opção: 0
+
+vezes que a senha apareceu em claro (esperado: 1, só no passo visível): 1

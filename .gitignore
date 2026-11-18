@@ -18,3 +18,7 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# Bancos de dados locais da Entrega 2
+dados/
+*.db

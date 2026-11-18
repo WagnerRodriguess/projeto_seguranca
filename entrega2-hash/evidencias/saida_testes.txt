@@ -1,0 +1,23 @@
+test_01_armazena_hash_argon2id_e_nao_a_senha (testes_auth.TestesAutenticacao.test_01_armazena_hash_argon2id_e_nao_a_senha) ... ok
+test_02_parametros_do_hash (testes_auth.TestesAutenticacao.test_02_parametros_do_hash) ... ok
+test_03_mesma_senha_gera_hashes_diferentes_por_causa_do_salt (testes_auth.TestesAutenticacao.test_03_mesma_senha_gera_hashes_diferentes_por_causa_do_salt) ... ok
+test_04_login_correto (testes_auth.TestesAutenticacao.test_04_login_correto) ... ok
+test_05_login_com_senha_incorreta (testes_auth.TestesAutenticacao.test_05_login_com_senha_incorreta) ... ok
+test_06_usuario_inexistente_tem_a_mesma_mensagem (testes_auth.TestesAutenticacao.test_06_usuario_inexistente_tem_a_mesma_mensagem) ... ok
+test_07_usuario_nao_diferencia_maiusculas (testes_auth.TestesAutenticacao.test_07_usuario_nao_diferencia_maiusculas) ... ok
+test_08_rejeita_senha_curta_e_longa (testes_auth.TestesAutenticacao.test_08_rejeita_senha_curta_e_longa) ... ok
+test_09_rejeita_senha_igual_ao_usuario (testes_auth.TestesAutenticacao.test_09_rejeita_senha_igual_ao_usuario) ... ok
+test_10_rejeita_usuario_invalido_e_duplicado (testes_auth.TestesAutenticacao.test_10_rejeita_usuario_invalido_e_duplicado) ... ok
+test_11_sql_injection_nao_autentica_e_nao_quebra (testes_auth.TestesAutenticacao.test_11_sql_injection_nao_autentica_e_nao_quebra) ... ok
+test_12_bloqueio_apos_falhas_consecutivas (testes_auth.TestesAutenticacao.test_12_bloqueio_apos_falhas_consecutivas) ... ok
+test_13_bloqueio_expira (testes_auth.TestesAutenticacao.test_13_bloqueio_expira) ... ok
+test_14_login_correto_zera_contador_de_falhas (testes_auth.TestesAutenticacao.test_14_login_correto_zera_contador_de_falhas) ... ok
+test_15_rehash_atualiza_parametros_antigos (testes_auth.TestesAutenticacao.test_15_rehash_atualiza_parametros_antigos) ... ok
+test_16_hash_corrompido_nao_autentica (testes_auth.TestesAutenticacao.test_16_hash_corrompido_nao_autentica) ... ok
+test_17_rejeita_senha_da_blocklist (testes_auth.TestesAutenticacao.test_17_rejeita_senha_da_blocklist) ... ok
+test_18_unicode_normalizado_antes_do_hash (testes_auth.TestesAutenticacao.test_18_unicode_normalizado_antes_do_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 7.085s
+
+OK

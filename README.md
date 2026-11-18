@@ -10,7 +10,7 @@ Docente: Ana Carla do Nascimento Santos
 | # | Tema | Pasta | Status |
 |---|------|-------|--------|
 | 1 | Criptografia assimétrica e confiança | [`entrega1-cripto`](entrega1-cripto/) | ✅ Concluída |
-| 2 | Hash e autenticação segura | [`entrega2-hash`](entrega2-hash/) | ⏳ Pendente |
+| 2 | Hash e autenticação segura | [`entrega2-hash`](entrega2-hash/) | ✅ Concluída |
 | 3 | Varredura de portas e serviços | [`entrega3-nmap`](entrega3-nmap/) | ⏳ Pendente |
 | 4 | Auditoria e correção de vulnerabilidades | [`entrega4-auditoria`](entrega4-auditoria/) | ⏳ Pendente |
 

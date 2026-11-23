@@ -1,0 +1,4 @@
+# Nmap 7.993 scan initiated Sun Nov 22 02:03:43 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.EXE" -sV --version-intensity 5 --script=default,ssh-auth-methods,ssh2-enum-algos -Pn -n --reason -p 21,22,80,139,445,3306 -oA C:\\Users\\Wagner\\Desktop\\etc\\programacao\\projeto_seguranca\\entrega3-nmap\\evidencias\\antes\\varredura_03_servicos 192.168.56.101
+Host: 192.168.56.101 ()	Status: Up
+Host: 192.168.56.101 ()	Ports: 21/open/tcp//ftp//vsftpd 3.0.5/, 22/open/tcp//ssh//OpenSSH 10.2p1 Ubuntu 2ubuntu3.8 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.66 ((Ubuntu))/, 139/open/tcp//netbios-ssn//Samba smbd 4/, 445/open/tcp//netbios-ssn//Samba smbd 4/, 3306/open/tcp//mysql//MariaDB 10.3.23 or earlier (unauthorized)/
+# Nmap done at Sun Nov 22 02:04:10 2026 -- 1 IP address (1 host up) scanned in 26.54 seconds

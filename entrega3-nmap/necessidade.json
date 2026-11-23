@@ -1,0 +1,11 @@
+{
+  "22/tcp": {"necessario": true, "justificativa": "Administração remota do servidor, apenas pela rede de gerência"},
+  "80/tcp": {"necessario": true, "justificativa": "Aplicação web do ambiente de homologação"},
+  "21/tcp": {"necessario": false, "justificativa": "FTP legado sem uso; a troca de arquivos pode ser feita por SFTP"},
+  "3306/tcp": {"necessario": false, "justificativa": "O banco só precisa responder à aplicação local; não deve ser acessível pela rede"},
+  "139/tcp": {"necessario": false, "justificativa": "Compartilhamento de arquivos NetBIOS não é requisito do ambiente"},
+  "445/tcp": {"necessario": false, "justificativa": "Compartilhamento de arquivos SMB não é requisito do ambiente"},
+  "137/udp": {"necessario": false, "justificativa": "Resolução de nomes NetBIOS não é requisito do ambiente"},
+  "138/udp": {"necessario": false, "justificativa": "Datagramas NetBIOS não são requisito do ambiente"},
+  "68/udp": {"necessario": true, "justificativa": "Cliente DHCP, necessário para a VM obter o endereço de rede"}
+}

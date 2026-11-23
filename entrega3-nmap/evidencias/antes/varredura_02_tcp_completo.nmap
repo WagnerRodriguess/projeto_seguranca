@@ -1,0 +1,14 @@
+# Nmap 7.993 scan initiated Sun Nov 22 02:03:31 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.EXE" -sS -Pn -n -p- --open --reason -T3 -oA C:\\Users\\Wagner\\Desktop\\etc\\programacao\\projeto_seguranca\\entrega3-nmap\\evidencias\\antes\\varredura_02_tcp_completo 192.168.56.101
+Nmap scan report for 192.168.56.101
+Host is up, received arp-response (0.0018s latency).
+Not shown: 65529 closed tcp ports (reset)
+PORT     STATE SERVICE      REASON
+21/tcp   open  ftp          syn-ack ttl 64
+22/tcp   open  ssh          syn-ack ttl 64
+80/tcp   open  http         syn-ack ttl 64
+139/tcp  open  netbios-ssn  syn-ack ttl 64
+445/tcp  open  microsoft-ds syn-ack ttl 64
+3306/tcp open  mysql        syn-ack ttl 64
+MAC Address: 08:00:27:9B:D0:38 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sun Nov 22 02:03:43 2026 -- 1 IP address (1 host up) scanned in 12.00 seconds

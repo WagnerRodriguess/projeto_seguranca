@@ -1,0 +1,24 @@
+{
+  "rotulo": "depois",
+  "alvo": "192.168.56.101",
+  "hosts_varridos": [
+    "192.168.56.101"
+  ],
+  "data_utc": "2026-11-22T05:44:29+00:00",
+  "nmap": "Nmap version 7.993 ( https://nmap.org )",
+  "privilegiado": true,
+  "autorizacao": {
+    "responsaveis": [
+      "Enzo Leonardo Reis Santana",
+      "Otávio Henrique Santos Mercena",
+      "Wagner Rodrigues Chagas"
+    ],
+    "orientadora": "Profa. Ana Carla do Nascimento Santos",
+    "data": "2026-11-22",
+    "janela": "22/11/2026, das 01h às 05h",
+    "declaracao": "Os integrantes são os proprietários das máquinas virtuais varridas e autorizam a varredura descrita neste arquivo. Nenhum alvo fora das redes listadas será testado."
+  },
+  "redes_autorizadas": [
+    "192.168.56.0/24"
+  ]
+}

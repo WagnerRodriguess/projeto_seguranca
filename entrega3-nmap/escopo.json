@@ -1,0 +1,20 @@
+{
+  "descricao": "Laboratório isolado para a Entrega 3: máquina virtual alvo em rede host-only, sem acesso à internet ou à rede da instituição.",
+  "autorizacao": {
+    "responsaveis": [
+      "Enzo Leonardo Reis Santana",
+      "Otávio Henrique Santos Mercena",
+      "Wagner Rodrigues Chagas"
+    ],
+    "orientadora": "Profa. Ana Carla do Nascimento Santos",
+    "data": "2026-11-22",
+    "janela": "22/11/2026, das 01h às 05h",
+    "declaracao": "Os integrantes são os proprietários das máquinas virtuais varridas e autorizam a varredura descrita neste arquivo. Nenhum alvo fora das redes listadas será testado."
+  },
+  "redes_autorizadas": ["192.168.56.0/24"],
+  "fora_de_escopo": [
+    "Qualquer endereço público da internet",
+    "Redes, equipamentos e serviços da universidade",
+    "Qualquer máquina de terceiros"
+  ]
+}

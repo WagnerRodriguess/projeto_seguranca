@@ -1,0 +1,69 @@
+# Nmap 7.993 scan initiated Sun Nov 22 02:03:43 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.EXE" -sV --version-intensity 5 --script=default,ssh-auth-methods,ssh2-enum-algos -Pn -n --reason -p 21,22,80,139,445,3306 -oA C:\\Users\\Wagner\\Desktop\\etc\\programacao\\projeto_seguranca\\entrega3-nmap\\evidencias\\antes\\varredura_03_servicos 192.168.56.101
+Nmap scan report for 192.168.56.101
+Host is up, received arp-response (0.00086s latency).
+
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 64 vsftpd 3.0.5
+22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 10.2p1 Ubuntu 2ubuntu3.8 (Ubuntu Linux; protocol 2.0)
+| ssh2-enum-algos: 
+|   kex_algorithms: (10)
+|       mlkem768x25519-sha256
+|       sntrup761x25519-sha512
+|       sntrup761x25519-sha512@openssh.com
+|       curve25519-sha256
+|       curve25519-sha256@libssh.org
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       ext-info-s
+|       kex-strict-s-v00@openssh.com
+|   server_host_key_algorithms: (4)
+|       rsa-sha2-512
+|       rsa-sha2-256
+|       ecdsa-sha2-nistp256
+|       ssh-ed25519
+|   encryption_algorithms: (6)
+|       chacha20-poly1305@openssh.com
+|       aes128-gcm@openssh.com
+|       aes256-gcm@openssh.com
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|   mac_algorithms: (10)
+|       umac-64-etm@openssh.com
+|       umac-128-etm@openssh.com
+|       hmac-sha2-256-etm@openssh.com
+|       hmac-sha2-512-etm@openssh.com
+|       hmac-sha1-etm@openssh.com
+|       umac-64@openssh.com
+|       umac-128@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-512
+|       hmac-sha1
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.4.66 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 4
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 4
+3306/tcp open  mysql       syn-ack ttl 64 MariaDB 10.3.23 or earlier (unauthorized)
+MAC Address: 08:00:27:9B:D0:38 (Oracle VirtualBox virtual NIC)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-11-22T05:04:49
+|_  start_date: N/A
+|_clock-skew: 52s
+|_nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 22 02:04:10 2026 -- 1 IP address (1 host up) scanned in 26.54 seconds

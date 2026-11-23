@@ -1,0 +1,4 @@
+C:\Program Files (x86)\Nmap\nmap.EXE -sn -n -oA C:\Users\Wagner\Desktop\etc\programacao\projeto_seguranca\entrega3-nmap\evidencias\antes\varredura_01_descoberta 192.168.56.101
+C:\Program Files (x86)\Nmap\nmap.EXE -sS -Pn -n -p- --open --reason -T3 -oA C:\Users\Wagner\Desktop\etc\programacao\projeto_seguranca\entrega3-nmap\evidencias\antes\varredura_02_tcp_completo 192.168.56.101
+C:\Program Files (x86)\Nmap\nmap.EXE -sV --version-intensity 5 --script=default,ssh-auth-methods,ssh2-enum-algos -Pn -n --reason -p 21,22,80,139,445,3306 -oA C:\Users\Wagner\Desktop\etc\programacao\projeto_seguranca\entrega3-nmap\evidencias\antes\varredura_03_servicos 192.168.56.101
+C:\Program Files (x86)\Nmap\nmap.EXE -sU --top-ports 20 -Pn -n --open --reason -T3 -oA C:\Users\Wagner\Desktop\etc\programacao\projeto_seguranca\entrega3-nmap\evidencias\antes\varredura_04_udp 192.168.56.101

@@ -1,0 +1,4 @@
+# Nmap 7.993 scan initiated Sun Nov 22 02:42:13 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.EXE" -sV --version-intensity 5 --script=default,ssh-auth-methods,ssh2-enum-algos,ssh-hostkey -Pn -n --reason -p 22,80 -oA C:\\Users\\Wagner\\Desktop\\etc\\programacao\\projeto_seguranca\\entrega3-nmap\\evidencias\\depois\\varredura_03_servicos 192.168.56.101
+Host: 192.168.56.101 ()	Status: Up
+Host: 192.168.56.101 ()	Ports: 22/open/tcp//ssh//OpenSSH 10.2p1 Ubuntu 2ubuntu3.8 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.66 ((Ubuntu))/
+# Nmap done at Sun Nov 22 02:44:27 2026 -- 1 IP address (1 host up) scanned in 133.65 seconds

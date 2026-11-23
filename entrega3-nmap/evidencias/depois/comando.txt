@@ -1,0 +1,4 @@
+nmap -sn -n -oA evidencias\depois\varredura_01_descoberta 192.168.56.101
+nmap -sS -Pn -n -p- --open --reason -T3 -oA evidencias\depois\varredura_02_tcp_completo 192.168.56.101
+nmap -sV --version-intensity 5 --script=default,ssh-auth-methods,ssh2-enum-algos,ssh-hostkey -Pn -n --reason -p 22,80 -oA evidencias\depois\varredura_03_servicos 192.168.56.101
+nmap -sU --top-ports 20 -Pn -n --open --reason -T3 -oA evidencias\depois\varredura_04_udp 192.168.56.101
